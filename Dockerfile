@@ -1,4 +1,4 @@
-FROM maven:3.2-jdk-7-onbuild
+FROM maven:3.2.5-jdk-7
 
 RUN apt-get update && apt-get upgrade -y && apt-get install -y git
 
