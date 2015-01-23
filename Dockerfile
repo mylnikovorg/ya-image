@@ -22,6 +22,6 @@ RUN cd /home/camelot-yandexer && mvn clean compile
 
 #ENV MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m -Xbootclasspath/a:."
 RUN export MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m -Xbootclasspath/a:."
-RUN cd /home/camelot-yandexer && mvn clean compile camelot-test:run
+CMD cd /home/camelot-yandexer && mvn clean compile camelot-test:run
 
 EXPOSE 8080
