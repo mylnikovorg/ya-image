@@ -27,6 +27,9 @@ RUN cat /home/camelot-yandexer/yandexer.properties
 
 RUN cd /home/camelot-yandexer && mvn clean compile
 
+RUN ls -l /home/camelot-yandexer
+
+
 ADD yandexer.properties /home/camelot-yandexer/target/camelot/WEB-INF/yandexer.properties
 ADD yandexer.properties /home/camelot-yandexer/target/camelot/META-INF/yandexer.properties
 ADD yandexer.properties /home/camelot-yandexer/src/main/resources/yandexer.properties
