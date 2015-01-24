@@ -36,7 +36,7 @@ ADD yandexer.properties /home/camelot-yandexer/src/main/resources/yandexer.prope
 ADD yandexer.properties /home/camelot-yandexer/target/camelot/yandexer.properties
 
 
-ENV MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m -Xbootclasspath/a:."
+#ENV MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m -Xbootclasspath/a:."
 RUN export MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m -Xbootclasspath/a:."
 CMD cd /home/camelot-yandexer && mvn clean compile camelot-test:run
 
