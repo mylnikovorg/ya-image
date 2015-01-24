@@ -22,6 +22,11 @@ RUN chmod +x /home/PhantomJS
 RUN /home/PhantomJS  
 #RUN  apt-get install -y phantomjs
 
+#RUN /home/jdk1.7.0_76/jre/bin/java -version
+
+ENV JAVA_HOME /home/jdk1.7.0_76/jre
+
+#RUN echo "$JAVA_HOME"
 
 RUN cd /home && git clone https://github.com/camelot-framework/camelot-yandexer.git && cd camelot-yandexer
 
@@ -35,7 +40,7 @@ RUN cat /home/camelot-yandexer/yandexer.properties
 
 #RUN pwd && ls -l /home/camelot-yandexer
 
-RUN cd /home/camelot-yandexer && mvn clean compile -X
+RUN cd /home/camelot-yandexer && mvn3 clean compile -X
 
 RUN ls -l /home/camelot-yandexer
 
@@ -48,6 +53,6 @@ ADD yandexer.properties /home/camelot-yandexer/target/camelot/yandexer.propertie
 
 #ENV MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m -Xbootclasspath/a:."
 RUN export MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m -Xbootclasspath/a:."
-CMD cd /home/camelot-yandexer && mvn clean compile camelot-test:run
+CMD cd /home/camelot-yandexer && mvn3 clean compile camelot-test:run
 
 EXPOSE 8080
