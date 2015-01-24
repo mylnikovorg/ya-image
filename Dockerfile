@@ -1,7 +1,17 @@
-FROM maven:3.2.5-jdk-7
+#FROM maven:3.2.5-jdk-7
+FROM ubuntu:14.04
+
+
 #RUN echo "deb http://mirror.yandex.ru/debian/ jessie main\ndeb-src http://mirror.yandex.ru/debian/ jessie-updates main" >> /etc/apt/sources.list
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y git
+RUN apt-get update && apt-get upgrade -y && apt-get install -y git wget
+
+ADD JavaInstall /home/JavaInstall
+RUN chmod +x /home/JavaInstall
+RUN /home/JavaInstall
+
+RUN apt-get remove -y maven2 && echo "deb http://ppa.launchpad.net/natecarlson/maven3/ubuntu precise main" >>/etc/apt/sources.list && apt-get update &&  apt-get install -y --force-yes maven3 && sudo ln -s /usr/share/maven3/bin/mvn /usr/bin/mvn 
+
 
 ADD PhantomJS /home/PhantomJS
 
