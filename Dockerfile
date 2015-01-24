@@ -55,4 +55,4 @@ ADD yandexer.properties /home/camelot-yandexer/target/camelot/yandexer.propertie
 RUN export MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m -Xbootclasspath/a:."
 CMD cd /home/camelot-yandexer && mvn3 clean compile camelot-test:run
 
-EXPOSE 8080
+EXPOSE 8080 18082
