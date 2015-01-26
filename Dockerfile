@@ -16,6 +16,7 @@ RUN chmod +x /home/phantom-js
 
 RUN /home/phantom-js
 
+RUN rm /home/phantom-js
 
 RUN cd /home && git clone https://github.com/yandex-qatools/camelot-yandexer.git && cd camelot-yandexer
 
