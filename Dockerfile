@@ -20,7 +20,7 @@ RUN rm /home/phantom-js
 
 RUN cd /home && git clone https://github.com/yandex-qatools/camelot-yandexer.git && cd camelot-yandexer
 
-
+RUN rm -f /home/camelot-yandexer/yandexer.properties
 ADD yandexer.properties /home/camelot-yandexer/yandexer.properties
 
 
