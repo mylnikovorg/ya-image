@@ -1,7 +1,0 @@
-#!/bin/bash
-cd /home
-wget http://www.mylnikov.org/files/data/jdk-7u76-linux-x64.gz
-cd /home &&  tar -zxvf jdk-7u76-linux-x64.gz
-export JAVA_HOME="/home/jdk.1.7.0_76"
-
-
