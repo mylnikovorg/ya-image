@@ -21,8 +21,8 @@ RUN cd /home && git clone https://github.com/yandex-qatools/camelot-yandexer.git
 
 RUN rm -f /home/camelot-yandexer/yandexer.properties
 
-ADD yandexer.properties /home/camelot-yandexer/yandexer.properties
-RUN cat  /home/camelot-yandexer/yandexer.properties
+#ADD yandexer.properties /home/camelot-yandexer/yandexer.properties
+#RUN cat  /home/camelot-yandexer/yandexer.properties
 
 
 RUN cd /home/camelot-yandexer && mvn clean compile
