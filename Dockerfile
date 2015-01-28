@@ -25,9 +25,9 @@ RUN rm -f /home/camelot-yandexer/yandexer.properties
 #RUN cat  /home/camelot-yandexer/yandexer.properties
 
 
-RUN cd /home/camelot-yandexer && mvn clean compile
+#RUN cd /home/camelot-yandexer && mvn clean compile
 
-RUN ls -l /home/camelot-yandexer
+#RUN ls -l /home/camelot-yandexer
 
 
 RUN export MAVEN_OPTS="-XX:MaxPermSize=512m -Xmx2048m -Xbootclasspath/a:."
