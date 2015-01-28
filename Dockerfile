@@ -1,6 +1,6 @@
 FROM maven:3.2.5-jdk-7
 
-RUN apt-get update && apt-get upgrade -y && apt-get install -y git wget
+RUN apt-get update && apt-get upgrade -y && apt-get install -y git wget telnet
 
 #ADD JavaInstall /home/JavaInstall
 #RUN chmod +x /home/JavaInstall
